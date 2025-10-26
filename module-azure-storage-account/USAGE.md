@@ -1,12 +1,13 @@
 # Basic usage
+
 ```hcl
 module "storage_basic" {
   source = "./module-azure-storage-account"
-  
+
   storage_account_name = "mycompanystorage001"
   resource_group_name  = "rg-production"
   location            = "West Europe"
-  
+
   tags = {
     Environment = "production"
     Owner       = "platform-team"
@@ -15,14 +16,15 @@ module "storage_basic" {
 ```
 
 # Advanced secure configuration
+
 ```hcl
 module "storage_secure" {
   source = "./module-azure-storage-account"
-  
+
   storage_account_name = "securestorage001"
   resource_group_name  = "rg-secure"
   location            = "West Europe"
-  
+
   # Enhanced security
   account_tier     = "Standard"
   replication_type = "GRS"
@@ -60,3 +62,4 @@ Environment = "production"
 Compliance = "required"
 }
 }
+```
