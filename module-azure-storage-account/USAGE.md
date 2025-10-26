@@ -1,32 +1,32 @@
 # Basic usage
-
+```hcl
 module "storage_basic" {
-source = "./module-azure-storage-account"
-
-storage_account_name = "mycompanystorage001"
-resource_group_name = "rg-production"
-location = "West Europe"
-
-tags = {
-Environment = "production"
-Owner = "platform-team"
+  source = "./module-azure-storage-account"
+  
+  storage_account_name = "mycompanystorage001"
+  resource_group_name  = "rg-production"
+  location            = "West Europe"
+  
+  tags = {
+    Environment = "production"
+    Owner       = "platform-team"
+  }
 }
-}
+```
 
 # Advanced secure configuration
-
+```hcl
 module "storage_secure" {
-source = "./module-azure-storage-account"
-
-storage_account_name = "securestorage001"
-resource_group_name = "rg-secure"
-location = "West Europe"
-
-# Enhanced security
-
-account_tier = "Standard"
-replication_type = "GRS"
-min_tls_version = "TLS1_2"
+  source = "./module-azure-storage-account"
+  
+  storage_account_name = "securestorage001"
+  resource_group_name  = "rg-secure"
+  location            = "West Europe"
+  
+  # Enhanced security
+  account_tier     = "Standard"
+  replication_type = "GRS"
+  min_tls_version  = "TLS1_2"
 
 # Network restrictions
 

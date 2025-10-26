@@ -148,13 +148,13 @@ module "web_storage" {
 | Name      | Version |
 | --------- | ------- |
 | terraform | >= 1.0  |
-| azurerm   | >= 3.0  |
+| azurerm   | 4.50.0  |
 
 ## Providers
 
 | Name    | Version |
 | ------- | ------- |
-| azurerm | >= 3.0  |
+| azurerm | 4.50.0  |
 
 ## Inputs
 
@@ -187,6 +187,7 @@ _See [variables.tf](./variables.tf) for complete list of variables and validatio
 
 | Name                      | Description                           |
 | ------------------------- | ------------------------------------- |
+| storage_account_id        | Storage account resource ID           |
 | storage_account_name      | Storage account name                  |
 | primary_blob_endpoint     | Primary blob endpoint URL             |
 | primary_connection_string | Primary connection string (sensitive) |
